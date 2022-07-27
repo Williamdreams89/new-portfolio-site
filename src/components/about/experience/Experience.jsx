@@ -50,6 +50,11 @@ const ExperiencePart = styled.div`
     }
   }
 `;
+
+
+const df = () =>{
+  d !== k
+}
 function Experience() {
   return (
     <ExperiencePart className="item__header educ__header">

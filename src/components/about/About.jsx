@@ -59,6 +59,12 @@ const AboutSection = styled.section`
 
 
 `;
+
+
+const kboy = () =>{
+  
+}
+
 export default function About() {
   return (
     <AboutSection id="about">

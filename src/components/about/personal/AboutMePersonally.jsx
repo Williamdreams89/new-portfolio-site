@@ -40,6 +40,9 @@ const MySelf = styled.div`
   }
 `;
 
+
+
+
 export default function AboutMePersonally() {
   return (
     <MySelf>
