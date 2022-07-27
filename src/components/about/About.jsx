@@ -3,19 +3,31 @@ import styled from "styled-components";
 import AboutMyEducation from "./education/AboutMyEducation";
 import Experience from "./experience/Experience";
 import AboutMePersonally from "./personal/AboutMePersonally";
+import AboutMySkills from "./skills/AboutMySkills";
+import AboutMyTestimonials from "./testimonials/AboutMyTestimonials";
 
 const AboutSection = styled.section`
   width: 100vw;
   min-height: 100vh;
+  margin-bottom: 3rem;
 
   .section__container {
-    width: 90%;
     margin: auto;
+
+    @media screen and (max-width: 600px){
+      width: 90%;
+    }
+    @media screen and (min-width: 601px) and (max-width: 900px){
+      width: 80%;
+    }
+    @media screen and (min-width: 901px){
+      width: 70%;
+    }
 
     h1 {
       text-transform: uppercase;
       position: relative;
-      margin-bottom: 3rem;
+      margin-bottom: 5rem;
 
       &::before {
         content: "";
@@ -57,13 +69,34 @@ const AboutSection = styled.section`
       }
   }
 
+  .about__items{
+    position: relative;
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 6rem;
+      height: 6rem;
+      border-left: 7px solid orangered;
+      border-top: 7px solid orangered;
+      left: -20px;
+      top: -10px;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 6rem;
+      height: 6rem;
+      border-right: 7px solid orangered;
+      border-bottom: 7px solid orangered;
+      right: -10px;
+      bottom: -10px;
+    }
+  }
 
 `;
 
-
-const kboy = () =>{
-  
-}
 
 export default function About() {
   return (
@@ -74,12 +107,14 @@ export default function About() {
           {/* About Self */}
           <AboutMePersonally />
           {/* About Skills */}
+          <AboutMySkills />
           {/* About Education */}
           <div className="experience__education">
             <AboutMyEducation />
             <Experience />
           </div>
           {/* About Testimonials */}
+          <AboutMyTestimonials />
         </div>
       </div>
     </AboutSection>

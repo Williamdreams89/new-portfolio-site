@@ -1,4 +1,3 @@
-import { green } from "@material-ui/core/colors";
 import styled from "styled-components";
 
 
@@ -10,7 +9,8 @@ export const NavigationBar = styled.nav`
     justify-content: space-around;
     align-items: center;
     font-family: cursive;
-    position: relative;
+    // position: fixed;
+    // z-index: 100;
 
 
     .nav__logo{

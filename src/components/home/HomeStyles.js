@@ -52,6 +52,10 @@ export const HomePage = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
+
+    @media screen and (min-width:941px){
+      margin-right: 2rem;
+    }
   }
 
   .socials {
@@ -91,4 +95,13 @@ export const HomePage = styled.div`
         
     }
   
+`;
+
+export const Container = styled.div`
+
+@media screen and (min-width:741px){
+  width:80%;
+  margin: auto;
+}
+
 `;

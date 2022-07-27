@@ -4,6 +4,7 @@ import {FaFacebook, FaTwitter, FaGithub, FaLinkedin} from 'react-icons/fa'
 
 export default function Home() {
   return (
+    <>
     <HomePage>
       <div className="social__profile">
         <img src="../images/william.png" alt="not-found" />
@@ -27,5 +28,6 @@ export default function Home() {
         <button>More About Me</button>
       </div>
     </HomePage>
+    </>
   );
 }
