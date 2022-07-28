@@ -17,7 +17,7 @@ body {
   /* background-color: rgb(228, 205, 205); */
 }
 
-::-webkit-scrollbar{
+*::-webkit-scrollbar{
   display: none;
 }
 
