@@ -4,13 +4,13 @@ import styled from "styled-components";
 export const NavigationBar = styled.nav`
     background-color: black;
     height: 4.5rem;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: cursive;
-    // position: fixed;
-    // z-index: 100;
+    position: fixed;
+    z-index: 100;
 
 
     .nav__logo{

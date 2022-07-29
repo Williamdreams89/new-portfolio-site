@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomePage = styled.div`
-  width: 100%;
+  min-width: 100%;
   height: fit-content;
   background-color: ;
   display: flex;
@@ -9,15 +9,15 @@ export const HomePage = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  box-shadow: 0 3px 25px #333;
+  // box-shadow: 0 3px 25px #333;
   margin-bottom: 5rem;
+  padding-top: 5rem;
   
 
 
   img {
     object-fit: cover;
-    max-width: 600px;
-    min-width: 400px;
+    max-width: 90%;
     height: 500px;
     background-color: orangered;
     margin-top: 3rem !important;
@@ -49,12 +49,11 @@ export const HomePage = styled.div`
 
   .social__profile{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 2rem;
 
     @media screen and (min-width:941px){
-      margin-right: 2rem;
+      // margin-right: 2rem;
     }
   }
 
