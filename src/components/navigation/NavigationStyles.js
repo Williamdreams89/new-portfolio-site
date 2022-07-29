@@ -8,7 +8,7 @@ export const NavigationBar = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: cursive;
+    font-family: 'Clicker';
     position: fixed;
     z-index: 100;
 
@@ -17,7 +17,7 @@ export const NavigationBar = styled.nav`
         color: aliceblue;
         position: relative;
         padding: 10px;
-        font-family: cursive;
+        font-family: 'Poppins', sans-serif;
         
         &::before{
             padding: 10px;
