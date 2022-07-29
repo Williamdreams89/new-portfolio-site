@@ -17,6 +17,7 @@ export const NavigationBar = styled.nav`
         color: aliceblue;
         position: relative;
         padding: 10px;
+        font-family: cursive;
         
         &::before{
             padding: 10px;
