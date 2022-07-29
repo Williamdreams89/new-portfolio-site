@@ -207,7 +207,7 @@ function Portfolio() {
           </div>
           <div className="main__container">
             {filteredImages
-              .filter((image) => image.tag.toLowerCase().includes(query))
+              .filter((image) => image.tag.toLowerCase().includes(query.toLowerCase()))
               .map((image) => (
                 <div key={image.id} className="portfolio__item">
                   <img src={`../images/${image.imgName}`} alt="" />
