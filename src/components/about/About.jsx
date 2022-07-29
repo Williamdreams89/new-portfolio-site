@@ -5,6 +5,8 @@ import Experience from "./experience/Experience";
 import AboutMePersonally from "./personal/AboutMePersonally";
 import AboutMySkills from "./skills/AboutMySkills";
 import AboutMyTestimonials from "./testimonials/AboutMyTestimonials";
+import {motion} from 'framer-motion';
+
 
 const AboutSection = styled.section`
   width: 100vw;
@@ -97,11 +99,15 @@ const AboutSection = styled.section`
 
 `;
 
-
 export default function About() {
   return (
     <AboutSection id="about">
-      <div className="section__container">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="section__container"
+      >
         <h1 className="section__title">About Me</h1>
         <div className="about__items">
           {/* About Self */}
@@ -116,7 +122,7 @@ export default function About() {
           {/* About Testimonials */}
           <AboutMyTestimonials />
         </div>
-      </div>
+      </motion.div>
     </AboutSection>
   );
 }

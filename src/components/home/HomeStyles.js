@@ -17,7 +17,7 @@ export const HomePage = styled.div`
     object-fit: cover;
     max-width: 90%;
     height: 500px;
-    background-color: black;
+    background-color: orangered;
     margin-top: 3rem !important;
     border-radius: 50% 50% 0 0;
     padding-top: 1rem;
@@ -50,6 +50,10 @@ export const HomePage = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    & .socials a:hover{
+      color: orangered;
+    }
   }
 
   .socials {
