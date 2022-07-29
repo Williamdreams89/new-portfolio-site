@@ -11,13 +11,13 @@ export const NavigationBar = styled.nav`
     font-family: 'Clicker';
     position: fixed;
     z-index: 100;
+    font-family: 'Poppins', sans-serif;
 
 
     .nav__logo{
         color: aliceblue;
         position: relative;
         padding: 10px;
-        font-family: 'Poppins', sans-serif;
         
         &::before{
             padding: 10px;

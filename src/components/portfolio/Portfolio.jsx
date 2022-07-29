@@ -42,10 +42,12 @@ const PortfolioPage = styled.section`
     width: 100%;
     
     .input__container{
-      width: 70%;
+      width: 80%;
       margin: auto;
+      
       input {
-        padding: 8px 50% 5px 5px;
+        font-size: 17px;
+        padding: 8px 5px 5px 5px;
         margin-bottom: 1rem !important;
         width: 100%;
         border: 2px solid orangered;
@@ -59,6 +61,7 @@ const PortfolioPage = styled.section`
   .tag__buttons {
     display: flex;
     max-width: 30vw;
+    gap: 10%;
 
     justify-content: space-around;
     align-items: center;
@@ -133,17 +136,13 @@ const PortfolioPage = styled.section`
 
   @media screen and (max-width: 740px) {
     
-    .projects__container {
-      width: 100%;
-        display: none;
+    .portfolio__item{
+      width: 90%;
+      height: 100%;
+      display: none;
   
-      .portfolio__item{
-        width: 90%;
-        height: 100%;
-  
-        .img{
-          width: 100%;
-        }
+      .img{
+        width: 100%;
       }
     }
     
@@ -185,28 +184,42 @@ function Portfolio() {
           </div>
 
           <div className="tag__buttons">
-            <TagButton settag={settag} name="all" />
-            <TagButton settag={settag} name="htmlcss" />
-            <TagButton settag={settag} name="django" />
-            <TagButton settag={settag} name="react" />
+            <TagButton
+              settag={settag}
+              name="all"
+              tagActive={tag === "all" ? true : false}
+            />
+            <TagButton
+              settag={settag}
+              name="htmlcss"
+              tagActive={tag === "htmlcss" ? true : false}
+            />
+            <TagButton
+              settag={settag}
+              name="django"
+              tagActive={tag === "django" ? true : false}
+            />
+            <TagButton
+              settag={settag}
+              name="react"
+              tagActive={tag === "react" ? true : false}
+            />
           </div>
           <div className="main__container">
             {filteredImages
               .filter((image) => image.tag.toLowerCase().includes(query))
               .map((image) => (
-                <div className="projects__container">
-                  <div key={image.id} className="portfolio__item">
-                    <img src={`../images/${image.imgName}`} alt="" />
-                    <div className="portfolio__detail">
-                      <div className="portfo__icons">
-                        <FaCode style={{ color: "white", fontSize: "26px" }} />
-                        <FaLink style={{ color: "white", fontSize: "26px" }} />
-                      </div>
-                      <div className="port__descrip">
-                        <h4 className="item__name">{image.title}</h4>
-                        <div className="dev__tools__icon"></div>
-                        <p className="intro">{image.description}</p>
-                      </div>
+                <div key={image.id} className="portfolio__item">
+                  <img src={`../images/${image.imgName}`} alt="" />
+                  <div className="portfolio__detail">
+                    <div className="portfo__icons">
+                      <FaCode style={{ color: "white", fontSize: "26px" }} />
+                      <FaLink style={{ color: "white", fontSize: "26px" }} />
+                    </div>
+                    <div className="port__descrip">
+                      <h4 className="item__name">{image.title}</h4>
+                      <div className="dev__tools__icon"></div>
+                      <p className="intro">{image.description}</p>
                     </div>
                   </div>
                 </div>
@@ -218,17 +231,33 @@ function Portfolio() {
   );
 }
 
-const TagButton = ({ name, settag, tag }) => {
+const TagStyle = styled.button`
+  .tag {
+    width: 4.8rem;
+    padding: 3px 6px;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    background-color: white;
+
+    &:hover,
+    .active {
+      background-color: orangered;
+      color: white;
+    }
+  }
+`;
+
+const TagButton = ({ name, settag, tag, tagActive }) => {
   return (
     <>
-      <button
+      <TagStyle
         tag={tag}
         settag={settag}
         onClick={() => settag(name)}
-        className={tag === name ? "active" : ""}
+        className={`tag ${tagActive ? "active" : null}`}
       >
         {name.toUpperCase()}
-      </button>
+      </TagStyle>
     </>
   );
 };

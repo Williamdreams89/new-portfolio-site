@@ -57,6 +57,14 @@ const Testimonials = styled.div`
       }
     }
   }
+
+  @media screen and (max-width:500px){
+    .swiper{
+      img{
+        right: -7rem;
+      }
+    }
+  }
 `;
 function AboutMyTestimonials() {
   return (

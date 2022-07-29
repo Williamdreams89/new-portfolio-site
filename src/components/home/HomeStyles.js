@@ -12,14 +12,12 @@ export const HomePage = styled.div`
   // box-shadow: 0 3px 25px #333;
   margin-bottom: 5rem;
   padding-top: 5rem;
-  
-
 
   img {
     object-fit: cover;
     max-width: 90%;
     height: 500px;
-    background-color: orangered;
+    background-color: black;
     margin-top: 3rem !important;
     border-radius: 50% 50% 0 0;
     padding-top: 1rem;
@@ -32,6 +30,7 @@ export const HomePage = styled.div`
     text-align: justify;
     width: 80%;
     margin: auto;
+    font-size: 14px;
 
     button {
       background-color: orangered;
@@ -43,18 +42,14 @@ export const HomePage = styled.div`
       width: fit-content;
       font-size: 16px;
       border-radius: 20px;
-      margin-top: 3rem; 
+      margin-top: 3rem;
     }
   }
 
-  .social__profile{
+  .social__profile {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    @media screen and (min-width:941px){
-      // margin-right: 2rem;
-    }
   }
 
   .socials {
@@ -77,7 +72,7 @@ export const HomePage = styled.div`
     }
   }
 
-  @media screen and (min-width: 741px) {
+  @media screen and (min-width: 741px) and (max-width: 1041px) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
@@ -86,21 +81,54 @@ export const HomePage = styled.div`
     margin: auto;
     margin-bottom: 5rem;
     height: 100vh;
+    width: 100%;
+
+    .profile__descr {
+      width: 55%;
+      font-size: 18px;
+      position: relative;
+      top: 15%;
+    }
+
+    .social__profile {
+      height: 100%;
+      width: 45%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+
+  @media screen and (min-width: 1042px) {
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    height: 100vh;
+    width: 100%;
 
 
 
     .profile__descr{
-        max-width: 400px;
+        width: 55%;
+        font-size: 18px;
+        position: relative;
+        top: 15%;
+        padding-left: 10%;
         
     }
-  
-`;
 
-export const Container = styled.div`
+    .social__profile{
+      height: 100%;
+      width: 45%;
+      display: flex;
+      gap: 1px;
 
-@media screen and (min-width:741px){
-  width:80%;
-  margin: auto;
-}
 
+    }
+  }
 `;
