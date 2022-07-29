@@ -31,7 +31,7 @@ const MySelf = styled.div`
       display: flex;
       gap: 4rem;
 
-      ul{
+      ul {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 50%;
@@ -39,9 +39,6 @@ const MySelf = styled.div`
     }
   }
 `;
-
-
-
 
 export default function AboutMePersonally() {
   return (
@@ -51,22 +48,29 @@ export default function AboutMePersonally() {
       </h3>
       <div className="self__descr">
         <p>
-          Well, my name is{" "}
+          Actually, my name is{" "}
           <span className="real__name">Danquah Kwafo William</span>. My other
-          names are Paa Willy & William Dreams. <br /> <br /> I discovered my
-          passion for software engineering when I was a sophomore in the
-          University; it was then, when I started learning more for my passion.
-          I am a level 300 undergrad pursuing my bachelor's degree at University
-          of Cape Coast, Ghana, majoring in Health Information Management.{" "}
-          <br /> <br />I was introduced to Computer programming with Python in
-          my sophomore year, which landed me into delving more web development
-          concepts with Django with which I started the never-ending journey of
-          becoming a full stack developer along with sharpening my eye for
-          innovations.
+          names are Paa Willy & William Dreams. A vibrant and determined young
+          lad who is forging his way into the software engineering world. <br />{" "}
+          <br /> I discovered my passion for software engineering when I was a
+          sophomore in the University; it was then, when I started learning more
+          for my passion. I am a level 300 undergrad pursuing my bachelor's
+          degree at University of Cape Coast, Ghana, majoring in Health
+          Information Management. <br /> <br />I was introduced to Computer
+          programming with Python in my sophomore year, which landed me into
+          delving more web development concepts with Django with which I started
+          the never-ending journey of becoming a full stack developer along with
+          sharpening my eye for innovations.
           <br /> <br />
         </p>
         <div className="demo__info">
-          <p><b><i>...other pertinent information: <br /> <br /></i></b></p>
+          <p>
+            <b>
+              <i>
+                ...other pertinent information: <br /> <br />
+              </i>
+            </b>
+          </p>
 
           <ul className="my__details">
             <li className="email">Email: williamdreams89@outlook.com</li>
